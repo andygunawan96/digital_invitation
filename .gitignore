@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.idea/
+landing_page/settings.py
+/static/
+/media/
+
