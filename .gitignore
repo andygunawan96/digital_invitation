@@ -4,4 +4,5 @@ __pycache__/
 landing_page/settings.py
 /static/
 /media/
-
+!**/migrations
+!**/migrations/__init__.py
