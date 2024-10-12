@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>#ANDYFallinLUP</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/template_1/css/animation.css' %}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
@@ -29,15 +29,7 @@
         </style>
 </head>
 <body>
-<button id="openNav" class="w3-button w3-white w3-xlarge w3-hide-medium w3-hide-large" onclick="w3_open()">&#9776;</button>
-<!-- Header / Home-->
-<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
-    <div class="w3-display-middle w3-text-white w3-center">
-        <h1 class="w3-jumbo">Andy & Lupita</h1>
-        <h2>Are getting married</h2>
-        <h2><b>18.08.2026</b></h2>
-    </div>
-</header>
+<button id="openNav" class="w3-button w3-xlarge w3-hide-medium w3-hide-large" style="top:0; position:fixed; z-index:1;" onclick="w3_open()">&#9776;</button>
 
 <!-- Navbar (sticky top) -->
 <div class="w3-top w3-hide-small">
@@ -49,13 +41,34 @@
     </div>
 </div>
 
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large"
-            onclick="w3_close()">Close &times;</button>
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#us" class="w3-bar-item w3-button">Andy & Lupita</a>
-    <a href="#wedding" class="w3-bar-item w3-button">Wedding</a>
-    <a href="#rsvp" class="w3-bar-item w3-button">RSVP</a>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+    <a href="#home" class="w3-bar-item w3-button" onclick="w3_close()">Home</a>
+    <a href="#us" class="w3-bar-item w3-button" onclick="w3_close()">Andy & Lupita</a>
+    <a href="#wedding" class="w3-bar-item w3-button" onclick="w3_close()">Wedding</a>
+    <a href="#rsvp" class="w3-bar-item w3-button" onclick="w3_close()">RSVP</a>
+</div>
+
+<div class="bird-container bird-container-one">
+   <div class="bird bird-one"></div>
+</div>
+<div class="bird-container bird-container-two">
+  <div class="bird bird-two"></div>
+</div>
+ <div class="bird-container bird-container-three">
+   <div class="bird bird-three"></div>
+ </div>
+ <div class="bird-container bird-container-four">
+   <div class="bird bird-four"></div>
+ </div>
+
+<!-- Header / Home-->
+<div class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-text-white w3-center">
+        <h1 class="w3-jumbo">Andy & Lupita</h1>
+        <h2>Are getting married</h2>
+        <h2><b>18.08.2026</b></h2>
+    </div>
 </div>
 
 <!-- About -->
@@ -137,15 +150,11 @@
 
 <script>
 function w3_open() {
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.width = "100%";
   document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
 }
 function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
   document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
 }
 </script>
 
